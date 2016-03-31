@@ -1,0 +1,47 @@
+{{extend 'layout.html'}}
+
+{{score=0}} 
+{{ansa='A'}}
+    {{if rows[-1].Ans==ansa:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+   {{ansb='C'}}
+    {{if rows1b[-1].Ans==ansb:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansc='B'}}
+    {{if rows1c[-1].Ans==ansc:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansd='C'}}
+    {{if rows1d[-1].Ans==ansd:}}
+  {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{anse='D'}}
+    {{if rows1e[-1].Ans==anse:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+<center>
+    <h3>
+        Congratulations you gave {{=score}} correct answers
+    </h3>
+</center>
+
+<center><form method="get" action="/onlineexam/default/index">
+    <button type="submit">go to home</button>
+</form></center>

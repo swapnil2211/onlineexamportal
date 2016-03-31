@@ -1,0 +1,74 @@
+{{extend 'layout.html'}}
+
+<img src="http://127.0.0.1:8000/onlineexam/static/10th-class-Results1.jpg">
+
+
+{{score=0}}
+{{ansa='A'}}
+    {{if rows[-1].Ans==ansa:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+   {{ansb='C'}}
+    {{if rows1b[-1].Ans==ansb:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansc='B'}}
+    {{if rows1c[-1].Ans==ansc:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansd='C'}}
+    {{if rows1d[-1].Ans==ansd:}}
+  {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{anse='D'}}
+    {{if rows1e[-1].Ans==anse:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+<center>
+    
+    <h1>
+        Congratulations</h1>
+    <br>
+    <hr>
+    <h3>
+    
+     You
+        gave {{=score}} correct answer(s). You have {{=score*20}}% efficiency.
+    </h3>
+</center>
+<br>
+<br>
+<br>
+
+<center><form method="get" action="/onlineexam/default/index/{{=score}}">
+    <button type="submit">go to home</button>
+</form></center>
+<style>
+    img
+    {
+        width: 60%;
+        height: 50%;
+        background-size: 500px 300px;
+        opacity: 0.5;
+    }
+body {
+   
+    background-repeat: no-repeat;
+}
+
+</style>

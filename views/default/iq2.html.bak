@@ -1,0 +1,155 @@
+{{extend 'layout.html'}}
+<center><h1><u>
+    
+    <br>IQ Level 2 Quiz
+</u></h1></center>
+<body background="http://127.0.0.1:8000/onlineexam/static/images.png" width=100% height=100% >
+{{score=0}}
+    <br>
+   
+   
+    <h3>
+        Q1.What is the capital of Pakistan?
+        </h3>
+        <h3>
+        A.Islamabad
+        </h3>
+        <h3>
+        B.Karachi
+        </h3>
+        <h3>
+        C.Lahore      
+        </h3>
+      <h3>
+        D.Rawalpindi
+        </h3>
+
+    {{=form2a}}
+{{if form2a.accepted:}}
+{{redirect(URL('iq2#z'))}}
+{{pass}}
+
+<a name="z"></a>
+<br>
+    <br>
+    <br>
+    <br>
+       <h3>
+        Q2.Jude Felix is a famous Indian sports personality of which field?
+        </h3>
+        <h3>
+        A.Football
+        </h3>
+        <h3>
+        B.Kho-Kho
+        </h3>
+        <h3>
+        C.Hockey
+        </h3>
+      <h3>
+        D.Table Tennis
+        </h3>
+
+    {{=form2b}}
+{{if form2b.accepted:}}
+{{redirect(URL('iq2#b'))}}
+{{pass}}
+
+<br>
+    <br>
+    <br>
+    <br>
+<a name="b"></a>
+ <h3>
+        Q3. Who plays Batman in Batman v Superman: Dawn of Justice ?
+        </h3>
+        <h3>
+        A.Brandon Routh
+        </h3>
+        <h3>
+        B.Ben Affleck
+        </h3>
+        <h3>
+        C.Christian Bale
+        </h3>
+      <h3>
+        D.Henry Cavill
+        </h3>
+
+    {{=form2c}}
+{{if form2c.accepted:}}
+{{redirect(URL('iq2#c'))}}
+{{pass}}
+<br>
+    <br>
+    <br>
+    <br>
+<a name="c"></a>
+ <h3>
+        Q4.Who is the Vice President of India ?
+        </h3>
+        <h3>
+        A. Pranab Mukherjee
+        </h3>
+        <h3>
+        B.Pratibha Patil
+        </h3>
+        <h3>
+        C.Md. Hammid Ansari
+        <br>
+      
+        D.Shankar Dayal Sharma
+        </h3>
+
+    {{=form2d}}
+{{if form2d.accepted:}}
+{{redirect(URL('iq2#d'))}}
+{{pass}}
+
+<br>
+    <br>
+    <br>
+    <br>
+<a name="d"></a>
+<h3>
+        Q5.Where will be the next Olympic Games take place?
+        </h3>
+        <h3>
+        A.Vancouver
+        </h3>
+        <h3>
+        B.Berlin
+        </h3>
+        <h3>
+        C.London
+        </h3>
+      <h3>
+        D.Rio de Janeiro
+        </h3>
+      
+    {{=form2e}}
+{{if form2e.accepted:}}
+{{redirect(URL('iq2#e'))}}
+{{pass}}
+
+    <br>
+    <br>
+    <br>
+    <br>
+<a name="e"></a>
+<h2>
+    Locked your options? If yes,Click Here to check your score.
+    </h2>
+<center><form method="get" action="/onlineexam/default/marks2">
+    <button type="submit">Finish</button>
+</form></center>
+</body>
+<style>
+body {
+   
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>

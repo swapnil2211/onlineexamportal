@@ -1,0 +1,67 @@
+{{extend 'layout.html'}}
+
+
+<h2>
+    Profile details
+</h2>
+
+<a href="edit">
+       <h2>
+         EDIT  
+       </h2> 
+</a>
+
+<table class="table">
+    {{for row in rows:}}
+    <tr>
+        <td>
+            <h4>
+               Name
+            </h4>           
+        </td>
+        <td>
+            {{=row.Name}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>
+                 Address
+            </h4>
+        </td>
+        <td>
+            {{=row.Address}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>                
+            Birthdate
+            </h4>
+        </td>
+        <td>
+            {{=row.birthdate}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>
+                Sex
+            </h4>
+        </td>
+        <td>
+            {{=row.Sex}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <h4>
+                Email Id
+            </h4>
+        </td>
+        <td>
+            {{=row.email}}
+        </td>>
+    </tr>
+    {{pass}}
+</table

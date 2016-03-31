@@ -1,0 +1,310 @@
+timestamp: 2015-05-02T17:59:03.620433
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2015-05-02T17:59:03.866991
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2015-05-02T17:59:04.039573
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2015-05-02T17:59:04.141621
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2015-05-02T17:59:04.251331
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2015-05-02T17:59:04.388536
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2015-05-02T18:02:03.911343
+CREATE TABLE Profile(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name CHAR(512),
+    Address TEXT,
+    birthdate DATE,
+    email CHAR(512) UNIQUE,
+    Sex CHAR(512)
+);
+success!
+timestamp: 2015-05-03T10:59:51.677348
+CREATE TABLE quiz(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Sex CHAR(512)
+);
+success!
+timestamp: 2015-05-03T11:09:29.484216
+ALTER TABLE quiz ADD ans CHAR(512);
+success!
+success!
+success!
+success!
+
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+
+
+success!
+success!
+success!
+timestamp: 2015-05-03T17:15:58.533694
+CREATE TABLE quizb(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T17:15:58.702954
+CREATE TABLE quizc(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T17:15:58.868472
+CREATE TABLE quizd(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T17:15:59.013439
+CREATE TABLE quize(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+
+timestamp: 2015-05-03T22:21:34.794279
+CREATE TABLE quiz2a(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T22:21:34.968499
+CREATE TABLE quiz2b(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T22:21:35.136048
+CREATE TABLE quiz2c(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T22:21:35.303098
+CREATE TABLE quiz2d(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!
+timestamp: 2015-05-03T22:21:35.486759
+CREATE TABLE quiz2e(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Ans CHAR(512)
+);
+success!

@@ -1,0 +1,65 @@
+{{extend 'layout.html'}}
+
+
+<h2>
+    Profile details
+</h2>
+
+<h3 align="right">
+    
+<a href="http://127.0.0.1:8000/onlineexam/default/user/profile">
+         EDIT  
+</a>
+    </h3>
+
+<table class="table">
+    <tr>
+        <th>
+            Profile Picture:
+        </th>
+        <td>
+            <img src="/onlineexam/appadmin/download/db/{{=rows[0].picture}}" alt="N.A."/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>
+                 Address
+            </h4>
+        </td>
+        <td>
+            {{=rows[0].Address}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>                
+            Birthdate
+            </h4>
+        </td>
+        <td>
+            {{=rows[0].birthdate}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h4>
+                Sex
+            </h4>
+        </td>
+        <td>
+            {{=rows[0].Sex}}
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <h4>
+                Email Id
+            </h4>
+        </td>
+        <td>
+            {{=rows[0].email}}
+        </td>>
+    </tr>
+    {{pass}}
+</table>

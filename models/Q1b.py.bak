@@ -1,0 +1,3 @@
+# -*- coding: utf-8 -*-
+db.define_table('quizb',
+                Field('Ans',requires=IS_IN_SET(["A","B","C","D"])))

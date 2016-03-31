@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+
+<table class="table">
+    {{ans='A'}}
+    {{if rows[-1].Ans==ans:}}
+    <h5>Correct</h5>
+    {{else:}}
+    <h5>wrong</h5>
+    {{pass}}
+    </table>

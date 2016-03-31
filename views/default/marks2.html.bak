@@ -1,0 +1,77 @@
+{{extend 'layout.html'}}
+<body background="http://127.0.0.1:8000/onlineexam/static/mark.jpeg">
+
+ <img src="http://127.0.0.1:8000/onlineexam/static/CET-Delhi-Results-2015.jpg">
+    </body>
+
+
+{{score=0}} 
+{{ansa='A'}}
+    {{if rows2a[-1].Ans==ansa:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+   {{ansb='C'}}
+    {{if rows2b[-1].Ans==ansb:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansc='B'}}
+    {{if rows2c[-1].Ans==ansc:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{ansd='C'}}
+    {{if rows2d[-1].Ans==ansd:}}
+  {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+{{anse='D'}}
+    {{if rows2e[-1].Ans==anse:}}
+    {{score=score+1}}
+    {{else:}}
+    {{score=score+0}}
+    {{pass}}
+
+<center>
+      <h1>
+        Congratulations</h1>
+    <br>
+    <hr>
+    <h3>
+    
+     You
+        gave {{=score}} correct answer(s). You have {{=score*20}}% efficiency.
+    </h3>
+</center>
+<br>
+<br>
+<br>
+<center><form method="get" action="/onlineexam/default/index">
+    <button type="submit">go to home</button>
+</form></center>
+<style>
+    img
+    {
+        width: 100%;
+        height: 100%;
+        background-size: 1310px 1060px;
+        opacity: 0.5;
+    }
+
+body {
+   
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>

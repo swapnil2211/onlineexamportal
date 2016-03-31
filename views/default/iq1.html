@@ -1,0 +1,155 @@
+{{extend 'layout.html'}}
+<center><h1><u>
+    
+    <br>IQ Level 1 Quiz
+</u></h1></center>
+<body background="http://127.0.0.1:8000/onlineexam/static/Text_Background_1.jpg" width=100% height=100% >
+{{score=0}}
+    <br>
+   
+   
+    <h3>
+        Q1.Who is prime Minister of India?
+        </h3>
+        <h3>
+        A.Narendra Modi
+        </h3>
+        <h3>
+        B.Madhur Modi
+        </h3>
+        <h3>
+        C.Vatsal Shah      
+        </h3>
+      <h3>
+        D.Archit Rai
+        </h3>
+
+    {{=form}}
+{{if form.accepted:}}
+{{redirect(URL('iq1#z'))}}
+{{pass}}
+
+<a name="z"></a>
+<br>
+    <br>
+    <br>
+    <br>
+       <h3>
+        Q2.The spherical shape of a drop is due to
+        </h3>
+        <h3>
+        A.Friction
+        </h3>
+        <h3>
+        B.Total internal reflection
+        </h3>
+        <h3>
+        C.Surface Tension
+        </h3>
+      <h3>
+        D.Resistivity
+        </h3>
+
+    {{=form1b}}
+{{if form1b.accepted:}}
+{{redirect(URL('iq1#b'))}}
+{{pass}}
+
+<br>
+    <br>
+    <br>
+    <br>
+<a name="b"></a>
+ <h3>
+        Q3. Earth is protected from Ultra voilet radiation by
+        </h3>
+        <h3>
+        A.Infrared Rays
+        </h3>
+        <h3>
+        B.Ozone
+        </h3>
+        <h3>
+        C.Greenhouse effect
+        </h3>
+      <h3>
+        D.ALL of the Above
+        </h3>
+
+    {{=form1c}}
+{{if form1c.accepted:}}
+{{redirect(URL('iq1#c'))}}
+{{pass}}
+<br>
+    <br>
+    <br>
+    <br>
+<a name="c"></a>
+ <h3>
+        Q4.Which number should come next in the series  1 , 1 , 2 , 3 , 5 , 8 , 13 , ?
+        </h3>
+        <h3>
+        A.8
+        </h3>
+        <h3>
+        B.30
+        </h3>
+        <h3>
+        C.21
+        <br>
+      
+        D.27
+        </h3>
+
+    {{=form1d}}
+{{if form1d.accepted:}}
+{{redirect(URL('iq1#d'))}}
+{{pass}}
+
+<br>
+    <br>
+    <br>
+    <br>
+<a name="d"></a>
+<h3>
+        Q5.Mary, who is sixteen years old, is four times as old as her brother. How old will Mary be when she is twice as old as her brother?
+        </h3>
+        <h3>
+        A.20
+        </h3>
+        <h3>
+        B.28
+        </h3>
+        <h3>
+        C.26
+        </h3>
+      <h3>
+        D.24
+        </h3>
+      
+    {{=form1e}}
+{{if form1e.accepted:}}
+{{redirect(URL('iq1#e'))}}
+{{pass}}
+
+    <br>
+    <br>
+    <br>
+    <br>
+<a name="e"></a>
+<h2>
+    Locked your options? If yes,Click Here to check your score.
+    </h2>
+<center><form method="get" action="/onlineexam/default/marks">
+    <button type="submit">Finish</button>
+</form></center>
+</body>
+<style>
+body {
+   
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>

@@ -1,0 +1,47 @@
+{{extend 'layout.html'}}
+<body background="http://127.0.0.1:8000/onlineexam/static/Presentation12.jpg">
+    
+
+<img src="http://127.0.0.1:8000/onlineexam/static/home1.jpg" >
+</body>
+<br>
+<br>
+<h1>
+   What is Onlineexam.com ?
+</h1>
+</br>
+<h4>
+    Onlineexam.com is education portal. It consists online examinations which have multiple choice questions. Our portal offers IQ tests of different levels. IQ Level 1 is for beginners and IQ Level 2 for experts.
+    <br>
+   
+    <br>
+    <br>
+    </h4>
+<h1>
+  Online Exam Pattern
+</h1>
+<h4><ul>
+    <li>All questions of the Online Exam are of objective type (multiple choice questions with only one correct choice of answer). 
+    </li><br>
+    <li>Each correct answer fetches 3 marks, while each incorrect answer has zero marks. 
+    </li><br>
+    <li>You can look at them once you have signed up so register and get going. You dont need to complete IQ Level 1 in order to sit for IQ Level 2. Best Of luck !
+</li></ul></h4>
+</body>
+<style>
+    img
+    {
+        width: 100%;
+        height: 100%;
+        background-size: 1310px 1060px;
+        opacity: 0.5;
+    }
+
+body {
+   
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
